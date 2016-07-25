@@ -10,7 +10,7 @@
         
 		 <link rel="icon" href="images/favicon.ico">
          <link rel="stylesheet" href="gallery-style.css">
-		 <link rel="shortcut icon" href="images/favicon.ico" />
+ <link rel="shortcut icon" href="images/favicon.ico" />
 		 <link rel="stylesheet" href="css/style.css">
 		 <link rel="stylesheet" href="css/slider.css">
      <link rel="stylesheet" href="css/style.css">
@@ -38,8 +38,139 @@
 			
 		 </script>
     
-     </head>
+  
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script type="text/JavaScript">
+<!--
+var picCount=0; // global
+var picArray= ["images/android_seminars.jpg","images/softskills.jpg","images/presentation_training.jpg","images/management_training.jpg","images/jobfair.jpg","images/appdevworkshop.jpg","images/planb_photo.jpg","images/eestecers.jpg","images/eestec_bday2.jpg","images/gallery/local/treasure1.jpg","images/gallery/local/rtbl31.jpg","images/gallery/local/rock41.jpg","images/gallery/local/rock31.jpg","images/gallery/local/kic1..jpg","images/gallery/local/20140314_162143_Richtone(HDR)1.jpg","images/gallery/local/20140314_162740.jpg","images/gallery/local/android.jpg","images/gallery/local/observ121.jpg","images/gallery/local/obs21.jpg","images/gallery/local/train2.jpg","images/gallery/local/train3.jpg","images/gallery/local/meeting1.jpg"]
+
+
+<!--var picArray1= ["images/management_training.jpg","images/presentation_training.jpg","images/softskills.jpg","images/aquaholics.jpg"]-->
+
+
+//
+// gets next picture in array
+function nextPic()
+{ // check if adding 1 exceeds number of pics in array
+picCount=(picCount+1<picArray.length)? picCount+1 : 0;
+// build the img to write to page using the new pic reference
+var build='<img border="0" src="'+picArray[picCount]+'" width="552" height="320">\
+';
+document.getElementById("imgHolder").innerHTML=build;
+// repeat this after a puse of 7000ms (7sec).
+setTimeout('nextPic()',7000)
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+
+imgHolder{ position:absolute; top:100px; left:100px; text-align:left; }
+.LgR { color:#F00; font-size:30px; font-weight:bold; line-height:130%; background-color:#FFF; }
+.a18B { color:#792D99; font-size:18px; font-weight:bold; background-color:#FFF; }
+-->
+</style>
+<title>Image Swap Static</title>
+
+
+
+
+
+
+
+<style>
+a img {
+    border:none;
+}
+ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+li {
+    display:block;
+    position:absolute;
+}
+.one {
+    animation:one 15s linear infinite alternate;
+}
+.two {
+    animation:two 15s linear infinite alternate;
+}
+.three {
+    animation:three 15s linear infinite alternate;
+}
+@keyframes one {
+    0%    {opacity:1; z-index:1;}
+    20% {opacity:1; z-index:99;}
+    40%    {opacity:0; z-index:1;}
+    60% {opacity:0; z-index:1;}
+    80% {opacity:0; z-index:1;}
+    100%{opacity:0; z-index:1;}
+}
+@keyframes two {
+    0%    {opacity:0; z-index:1;}
+    20% {opacity:0; z-index:1;}
+    40%    {opacity:1; z-index:1;}
+    60% {opacity:1; z-index:99;}
+    80% {opacity:0; z-index:1;}
+    100%{opacity:0; z-index:1;}
+}
+@keyframes three {
+    0%    {opacity:0; z-index:1;}
+    20% {opacity:0; z-index:1;}
+    40%    {opacity:0; z-index:1;}
+    60% {opacity:0; z-index:1;}
+    80% {opacity:1; z-index:1;}
+    100%{opacity:1; z-index:99;}
+}
+@keyframes four {
+    0%    {opacity:0; z-index:1;}
+    20% {opacity:0; z-index:1;}
+    40%    {opacity:0; z-index:1;}
+    60% {opacity:0; z-index:1;}
+    80% {opacity:0; z-index:1;}
+    100%{opacity:1; z-index:99;}
+}
+ 
+</style>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </head>
      <body  class="">
+
+
+<body onload="setTimeout('nextPic()',2000)">
+
+
+
+
+
 <!--==============================header=================================-->
   <header>
 
@@ -116,11 +247,80 @@
        
          <div class="grid_13">
            <div class="headline-text"> Local Events</div>
-            <a href="local_events.html" ><img src="images/uni2.jpg" width="552" height="320" alt=""></a> </div>
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="local_events.html" >
+<div id="imgHolder">
+<img border="0" src="images/uni2.jpg" width="552" height="320">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
            
                   <div class="grid_13">
            <div class="headline-text">International Events</div>
-            <a href="international_events.html" ><img src="images/aquaholics.jpg" width="552" height="320" alt=""></a> </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="rotator">
+<li class="four"><a href="international_events.html"><img src="images/workshop.jpg" width="552" height="320" /></a></li>
+<li class="three"><a href="international_events.html"><img src="images/workshop2.jpg" width="552" height="320" /></a></li>
+<li class="two"><a href="international_events.html"><img src="images/hobom.jpg" width="552" height="320" /></a></li>
+<li class="one"><a href="international_events.html"><img src="images/aquaholics.jpg" width="552" height="320" /></a></li>
+</ul>
+
+
+
+
+
+
+ </div>
      
       </div>
  </div>
